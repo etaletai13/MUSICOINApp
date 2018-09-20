@@ -1,6 +1,6 @@
 {
   "name": "SKIOApp",
-  "targetUrl": "https://skiomusic.com/login",
+  "targetUrl": "https://musicoin.org/welcome-musician",
   "disableDevTools": true,
   "disableContextMenu": true,
   "verbose": false,
