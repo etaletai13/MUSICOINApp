@@ -6,7 +6,7 @@
   "verbose": false,
   "titleBarStyle": "hidden",
   "hideWindowFrame": false,
-  "platform": "darwin",
+  "platform": "linux",
   "arch": "x64",
   "version": "0.36.4",
   "out": "./knitting",
