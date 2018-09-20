@@ -19,4 +19,4 @@ deploy:
   file: './dist/MUSICOINApp_1.0.0_amd64.dmg'
   on:
     repo: etaletai13/MUSICOINApp
-    branch: linux
+    branch: darwin
