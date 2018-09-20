@@ -1,4 +1,4 @@
-os: linux
+os: osx
 language: node_js
 node_js: stable
 cache:
@@ -6,9 +6,11 @@ cache:
     - node_modules
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
+before_script:
+    - brew install wine -qq
 script:
     - yarn --link-duplicates
-    - node ./knit
+    - node ./build
     - yarn build -m dmg --pd './knitting/MUSICOINApp-darwin-x64/MUSICOINApp.app'
 deploy:
   provider: releases
