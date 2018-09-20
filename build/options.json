@@ -6,7 +6,7 @@
   "verbose": false,
   "titleBarStyle": "hidden",
   "hideWindowFrame": false,
-  "platform": "linux",
+  "platform": "win32",
   "arch": "x64",
   "version": "0.36.4",
   "out": "./knitting",
