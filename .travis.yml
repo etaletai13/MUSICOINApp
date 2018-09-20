@@ -1,5 +1,4 @@
 os: linux
-services: docker
 language: node_js
 node_js: stable
 cache:
@@ -8,20 +7,14 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 script:
-    -  docker run --rm \
-        --env-file <(env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS|APPVEYOR_|CSC_|_TOKEN|_KEY|AWS_|STRIP|BUILD_') \
-        -v ${PWD}:/project \
-        -v ~/.cache/electron:/root/.cache/electron \
-        -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-        electronuserland/builder:wine \
-        /bin/bash -c "yarn --link-duplicates --pure-lockfile && node ./build && yarn build -w nsis --pd ./knittig/MUSICOINApp-win32-x64/ && yarn build -l deb --pd ./knitting/musicoin-app-linux-x64/"
-before_cache:
-  - rm -rf $HOME/.cache/electron-builder/wine
+    - yarn --link-duplicates
+    - node ./knit
+    - yarn build -l deb --pd './knitting/musicoin-app-linux-x64'
 deploy:
   provider: releases
   api_key: $GH_TOKEN
   skip_cleanup: true
-  file: './dist/MUSICOINApp-1.0.0.dmg'
+  file: './dist/MUSICOINApp_1.0.0_amd64.deb'
   on:
     repo: etaletai13/MUSICOINApp
-    branch: master
+    branch: linux

@@ -1,14 +1,15 @@
 {
-  "name": "SKIOApp",
-  "description": "SKIO Music desktop app",
+  "name": "MUSICOINApp",
+  "description": "MUSICOIN Music desktop app",
   "keywords": ["music","skio"],
   "version": "1.0.0",
   "main": "build/index.js",
+  "private": true,
   "author": { 
     "name": "Casey Parker",
     "email": "parker.casey@icloud.com",
     "url": "caseyparker.codes"},
-  "repository": "github:etaletai13/SKIOApp",
+  "repository": "github:etaletai13/MUSICOINApp",
   "license": "MIT",
   "devDependencies": {
     "electron-builder": "~20.28.4",
