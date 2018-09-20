@@ -6,8 +6,6 @@ cache:
     - node_modules
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
-before_script:
-    - brew install wine -qq
 script:
     - yarn --link-duplicates
     - node ./build
