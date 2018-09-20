@@ -9,12 +9,12 @@ cache:
 script:
     - yarn --link-duplicates
     - node ./knit
-    - yarn build -l deb --pd './knitting/musicoin-app-linux-x64'
+    - yarn build -m dmg --pd './knitting/MUSICOINApp-darwin-x64/MUSICOINApp.app'
 deploy:
   provider: releases
   api_key: $GH_TOKEN
   skip_cleanup: true
-  file: './dist/MUSICOINApp_1.0.0_amd64.deb'
+  file: './dist/MUSICOINApp_1.0.0_amd64.dmg'
   on:
     repo: etaletai13/MUSICOINApp
     branch: linux
