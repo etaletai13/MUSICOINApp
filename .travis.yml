@@ -6,6 +6,9 @@ cache:
     - node_modules
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install wine -qq
 script:
     - yarn --link-duplicates
     - node ./build
